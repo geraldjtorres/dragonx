@@ -1,0 +1,133 @@
+
+
+
+// DESKTOP STYLES
+
+.nav {
+    // border-bottom: 1px solid #EAEAEB;
+    padding: 0 90px;
+    position: relative;
+    z-index: 3;
+}
+
+.menu {
+    display: flex;
+    // border: 1px solid red;
+    justify-content: space-between;
+    padding: 16px 0;
+
+    .links {
+      display: flex;
+      align-items: center;
+
+      a {
+        text-decoration: none;
+        color: $dragonx-blue;
+        margin: 0 22px;
+        font-family: $proxima-nova-rg;
+      }
+    }
+
+   img {
+    height: 100%;
+    width: 130px;
+
+   }
+
+   .selected {
+    font-family: 'Proxima Nova Bd', Roboto, Arial, sans-serif;
+    border-bottom: $dragonx-blue 2px solid;
+  }
+}
+
+label {
+    margin: 0 40px 0 0;
+    font-size: 26px;
+    line-height: 70px;
+    display: none;
+    width: 26px;
+}
+#toggle {
+    display: none;
+}
+
+.mobile-logo {
+  display: none;
+}
+
+//TABLET STYLES
+
+@media only screen and (max-width: 800px) {
+  .nav {
+    padding: 0 20px;
+  }
+
+  .menu .links a {
+    margin: 0 10px;
+  }
+
+}
+
+
+
+
+
+// MOBILE STYLES
+
+@media only screen and (max-width: 500px) {
+  label {
+      display: block;
+      cursor: pointer;
+      position: relative;
+      z-index: 3;
+  }
+  .menu {
+      text-align: center;
+      width: 100%;
+      display: none;
+      position: absolute;
+      left: 0;
+      top: 14px;
+
+      .links {
+        flex-direction: column;
+        padding-top: 20px;
+      }
+  }
+  .menu a {
+      display: block;
+      // border-bottom: 1px solid #EAEAEB;
+      margin: 0;
+      padding: 20px 0;
+
+  }
+  #toggle:checked + .menu {
+      display: block;
+  }
+
+  .header-logo {
+    position: absolute;
+    top: 0;
+  }
+
+  .menu-logo {
+    display: none;
+  }
+
+  .mobile-logo {
+    display: block;
+    position: absolute;
+    top: 0;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+

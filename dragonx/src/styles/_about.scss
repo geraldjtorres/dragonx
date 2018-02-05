@@ -1,0 +1,365 @@
+
+h1 {
+  font-family: $proxima-nova-bl;
+  color: $dragonx-blue;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: $proxima-nova-bl;
+  color: $dragonx-blue;
+  letter-spacing: 2px;
+  padding: 0;
+  margin: 0;
+}
+
+p {
+  font-family: $proxima-nova-rg;
+  color: $dragonx-blue;
+
+}
+
+.about-us {
+  height: 100%;
+}
+
+.bg {
+  background-image: url('/assets/img/dragonx_about_desktop_bg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  // border: 1px solid blue;
+  z-index: 1;
+  opacity: 1;
+  transition: background-image 6s ease-in-out;
+  transition: opacity 0.6s ease-in-out;
+  background-position: center;
+}
+
+.content-container {
+  position: relative;
+  z-index: 2;
+}
+
+.scroll-container {
+    position: absolute;
+    z-index: 1;
+    bottom: 40px;
+    left: calc(100vw - 95%);
+    width: 144px;
+    height: 58px;
+    transform: rotate(-90deg);
+    overflow: hidden;
+
+  .animate-scroll {
+
+    height: 20px;
+    position: relative;
+    left: 58px;
+    overflow: hidden;
+  }
+
+}
+
+.scroll-label {
+  font-family: $proxima-nova-bd;
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 20px;
+  position: absolute;
+  letter-spacing: 2px;
+  bottom: 0;
+  transition: bottom 0.5s ease-out;
+}
+
+.scroll-line {
+  width: 144px;
+  height: 2px;
+  background: #ffffff;
+  margin-top: 10px;
+  margin-top: 10px;
+  position: absolute;
+  transition: right 0.5s ease-out;
+  right: 0;
+}
+
+
+
+
+// Styling for all slides
+.section {
+    display: flex;
+
+  .fp-tableCell {
+    margin: 0 auto;
+    margin-top: 180px;
+  }
+
+  .animate-box {
+    // border: 1px solid red;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .content-slide {
+    // border: 1px solid red;
+    height: 306px;
+    width: 790px;
+
+    .header-slide {
+      .animate-box {
+        height: 80px;
+      }
+    }
+
+    .paragraph-slide {
+      .animate-box {
+        height: 30px;
+        margin-top: 10px;
+      }
+    }
+  }
+
+}
+
+
+.slide-1{
+  display: flex;
+
+  .content-slide {
+    // border: 1px solid red;
+    width: 660px;
+    height: 192px;
+  }
+
+  .animate-box {
+    height: 192px;
+  }
+}
+
+.hero-image {
+  position: absolute;
+  top: 202px;
+  left: 0;
+  transition: all 0.5s ease-out;
+  // transition-delay: 0.5s;
+}
+
+.animate-header {
+  font-size: 80px;
+  letter-spacing: 4px;
+  position: absolute;
+  top: 90px;
+  transition: all 0.5s ease-out;
+  opacity: 0;
+}
+
+.animate-paragraph {
+  font-size: 20px;
+  line-height: 38px;
+  position: absolute;
+  top: 20px;
+  transition: all 0.5s ease-out;
+  opacity: 0;
+}
+
+// styling for page numbers
+.page-container {
+  // border: 1px solid red;
+  width: 50px;
+  height: 60px;
+  position: absolute;
+  top: 37%;
+  left: calc(100vw - 93%);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.animate-page-number {
+  padding: 2px 0;
+  // border: 1px solid red;
+  overflow: hidden;
+  position: relative;
+  width:20px;
+  height: 18px;
+}
+
+.page-number {
+  position: absolute;
+  left: 6px;
+  top: 0;
+  transition: all 0.5s ease-out;
+  top: 20px;
+  opacity: 0
+}
+
+
+.animate-page-line {
+  width: 20px;
+  height:1px;
+  background: $dragonx-blue;
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+
+
+//PAGE NUMBER responsive styling
+
+@media only screen and (max-width: 1030px) {
+
+ .page-container {
+    left: calc(100vw - 58%);
+    bottom: 0;
+    top: auto;
+  }
+
+}
+
+
+//TABLET STYLES
+
+@media only screen and (max-width: 800px) {
+  .section {
+    .content-slide {
+      width: 520px;
+
+      .header-slide {
+        .animate-box {
+          height: 50px;
+        }
+      }
+    }
+  }
+  .slide-1 {
+    .content-slide {
+      width: 400px;
+
+      .animate-box {
+        height: 120px;
+      }
+    }
+
+  }
+
+  .hero-image {
+    width: 400px;
+  }
+
+  .animate-header {
+    font-size: 56px;
+  }
+
+  .animate-paragraph {
+    font-size: 16px;
+  }
+
+}
+
+
+
+
+
+
+// MOBILE STYLES
+
+@media only screen and (max-width: 500px) {
+  .section {
+    .content-slide {
+      width: 328px;
+
+      .header-slide {
+        .animate-box {
+          height: 32px;
+        }
+      }
+
+      .paragraph-slide {
+        .animate-box {
+          height: 26px;
+        }
+      }
+    }
+  }
+  .slide-1 {
+    .content-slide {
+      width: 300px;
+
+      .animate-box {
+        height: 90px;
+      }
+    }
+
+  }
+
+  .hero-image {
+    width: 300px;
+  }
+
+  .animate-header {
+    font-size: 34px;
+  }
+
+  .animate-paragraph {
+    font-size: 9px;
+  }
+
+  .page-container {
+    left: calc(100vw - 58%);
+    bottom: 0;
+    top: auto;
+  }
+
+}
+
+//Animation classes
+
+.fade-out{
+  opacity: 0;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+.slide-up {
+  top: 0;
+  opacity: 1;
+}
+
+.slide-left {
+  bottom: 20px;
+}
+
+.slide-down {
+  right: 100%;
+}
+
+.slide-up-extra-paragraph {
+  top: 40px;
+  opacity: 1;
+}
+
+.text-delay {
+  transition-delay: 0.3s;
+}
+
+.hero-image-delay {
+  transition-delay: 0.8s;
+}
+
+.link-slide-up {
+  top: 50px;
+}
+
+.page-number-delay-down {
+  transition-delay: 1s;
+}
+.page-number-delay-up {
+  transition-delay: 0.1s;
+}
+
+
